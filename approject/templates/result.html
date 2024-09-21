@@ -1,0 +1,21 @@
+{% extends 'main.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Diabetes{% endblock title %}</title>
+  </head>
+  <body>
+    <br />
+    <div align="center">
+      <h1>การตรวจเบาหวานในสตรีมีครรภ์พบว่าเป็น: {{result}}</h1>
+      <h2>
+        หมายเหตุ: ถ้าผลตรวจเป็น 0 คือไม่เป็นเบาหวาน ถ้าเป็น 1
+        มีโอกาสจะเป็นเบาหวาน กรุณาพบแพทย์ด่วน
+      </h2>
+      <h2><a href="{% url 'predictor' %}">คลิกเพิ่มข้อมูลใหม่</a></h2>
+    </div>
+  </body>
+</html>
+{% endblock %}
